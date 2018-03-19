@@ -14,6 +14,9 @@ import { APP_ROUTES } from './app.routes';
 //MODULOS
 import { PagesModule } from './pages/pages.module';
 
+//Servicios
+import { ServiceModule } from './services/service.module';
+
 
 
 @NgModule({
@@ -27,7 +30,8 @@ import { PagesModule } from './pages/pages.module';
     FormsModule,
     HttpModule,
     APP_ROUTES,
-    PagesModule
+    PagesModule,
+    ServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]
