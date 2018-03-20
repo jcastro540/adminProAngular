@@ -1,3 +1,5 @@
+import { RxjComponent } from './rxj/rxj.component';
+import { PromesasComponent } from './promesas/promesas.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { Routes, RouterModule } from '@angular/router';
 import { Graficas1Component } from './graficas1/graficas1.component';
@@ -11,10 +13,12 @@ const pagesRoutes: Routes = [
     path: '',
     component: PagesComponent,
     children:[
-      {path: 'dashboard', component: DashboardComponent},
-      {path: 'progress', component: ProgressComponent},
-      {path: 'graficas1', component: Graficas1Component},
-      {path: 'account-settings', component: AccountSettingsComponent},
+      {path: 'dashboard', component: DashboardComponent, data:{titulo: "Dashboard"}},
+      {path: 'progress', component: ProgressComponent,  data:{titulo: "ProgressBars"}},
+      {path: 'graficas1', component: Graficas1Component,  data:{titulo: "Gráficas"}},
+      {path: 'promesas', component: PromesasComponent,  data:{titulo: "Promesas"}},
+      {path: 'rxjs', component: RxjComponent,  data:{titulo: "RxJs"}},
+      {path: 'account-settings', component: AccountSettingsComponent,  data:{titulo: "Ajustes de Tema"}},
       {path: '', redirectTo: '/dashboard', pathMatch: 'full'}
     ]
   }
